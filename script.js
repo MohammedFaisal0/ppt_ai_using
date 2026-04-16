@@ -1,7 +1,33 @@
 const exportPdfBtn = document.getElementById("exportPdfBtn");
 const exportPptxBtn = document.getElementById("exportPptxBtn");
 const navLinks = Array.from(document.querySelectorAll(".quick-nav__link"));
+const menuToggle = document.getElementById("menuToggle");
+const quickNav = document.getElementById("primary-navigation");
+const navBackdrop = document.getElementById("navBackdrop");
 const sections = Array.from(document.querySelectorAll(".panel[id]"));
+
+if (menuToggle && quickNav) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+    const nextOpen = !isOpen;
+    menuToggle.setAttribute("aria-expanded", String(nextOpen));
+    menuToggle.classList.toggle("is-open", nextOpen);
+    quickNav.classList.toggle("is-open", nextOpen);
+    navBackdrop?.classList.toggle("is-visible", nextOpen);
+  });
+}
+
+function closeMobileMenu() {
+  if (!menuToggle || !quickNav) return;
+  menuToggle.setAttribute("aria-expanded", "false");
+  menuToggle.classList.remove("is-open");
+  quickNav.classList.remove("is-open");
+  navBackdrop?.classList.remove("is-visible");
+}
+
+if (navBackdrop) {
+  navBackdrop.addEventListener("click", closeMobileMenu);
+}
 
 function setActiveLink(id) {
   navLinks.forEach((link) => {
@@ -26,6 +52,10 @@ const sectionObserver = new IntersectionObserver(
 );
 
 sections.forEach((section) => sectionObserver.observe(section));
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", closeMobileMenu);
+});
 
 if (exportPdfBtn) {
   exportPdfBtn.addEventListener("click", () => {

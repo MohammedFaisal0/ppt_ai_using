@@ -55,6 +55,7 @@ body {
   align-items: center;
   gap: 16px;
   min-height: var(--topbar-h);
+  position: relative;
 }
 
 .brand {
@@ -74,11 +75,70 @@ body {
   background: var(--accent);
 }
 
+.menu-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  color: #e8f2fc;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.menu-toggle__bars {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-toggle__bar {
+  width: 24px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition: transform 200ms ease, opacity 200ms ease;
+}
+
+.menu-toggle.is-open .menu-toggle__bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.is-open .menu-toggle__bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.is-open .menu-toggle__bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.menu-toggle__sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .quick-nav {
   display: flex;
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+
+.quick-nav.is-open {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .quick-nav__link {
@@ -130,7 +190,7 @@ body {
 }
 
 .presentation {
-  padding-block: 26px 64px;
+  padding-block: 0 64px;
 }
 
 .panel {
@@ -416,17 +476,71 @@ body {
     padding-block: 40px;
   }
 
-  .quick-nav {
-    order: 3;
-    width: 100%;
+  .menu-toggle {
+    display: inline-flex;
+    order: 2;
+    margin-inline-start: auto;
   }
 
-  .pdf-btn {
-    margin-inline-start: 0;
+  .quick-nav {
+    position: absolute;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    top: 100%;
+    background: rgba(11, 37, 67, 0.98);
+    border-radius: 0 0 18px 18px;
+    padding: 18px 16px 20px;
+    flex-direction: column;
+    gap: 14px;
+    transform: translateY(-12px);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    box-shadow: 0 24px 64px rgba(11, 37, 67, 0.16);
+    transition: transform 220ms ease, opacity 220ms ease, visibility 0ms linear 220ms;
+  }
+
+  .quick-nav.is-open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    visibility: visible;
+    transition: transform 220ms ease, opacity 220ms ease;
+  }
+
+  .nav-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.34);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 220ms ease;
+    z-index: 50;
+  }
+
+  .nav-backdrop.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .quick-nav__link {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 14px;
   }
 
   .action-buttons {
+    order: 4;
     margin-inline-start: 0;
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .pdf-btn {
+    flex: 1 1 100%;
+    min-width: 0;
   }
 }
 

@@ -1,223 +1,290 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>استخدام أدوات الذكاء الاصطناعي في الدعم الفني</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="topbar">
-    <div class="container topbar__inner">
-      <div class="brand">
-        <span class="brand__dot"></span>
-        <span>مستند داخلي</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>استخدام أدوات الذكاء الاصطناعي في الدعم الفني</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <div class="brand">
+          <span class="brand__dot"></span>
+          <span>مستند داخلي</span>
+        </div>
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-navigation"
+        >
+          <span class="menu-toggle__sr">فتح القائمة</span>
+          <span class="menu-toggle__bars" aria-hidden="true">
+            <span class="menu-toggle__bar"></span>
+            <span class="menu-toggle__bar"></span>
+            <span class="menu-toggle__bar"></span>
+          </span>
+        </button>
+        <nav
+          class="quick-nav"
+          id="primary-navigation"
+          aria-label="التنقل بين الأقسام"
+        >
+          <a href="#cover" class="quick-nav__link is-active">العنوان</a>
+          <a href="#work" class="quick-nav__link">طبيعة العمل</a>
+          <a href="#tools" class="quick-nav__link">الأدوات</a>
+          <a href="#impact" class="quick-nav__link">الأثر</a>
+          <a href="#governance" class="quick-nav__link">الضوابط</a>
+        </nav>
+        <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+        <div class="action-buttons">
+          <button class="pdf-btn" id="exportPdfBtn" type="button">
+            تصدير إلى PDF
+          </button>
+          <button class="pdf-btn pdf-btn--alt" id="exportPptxBtn" type="button">
+            تصدير إلى PowerPoint
+          </button>
+        </div>
       </div>
-      <nav class="quick-nav" aria-label="التنقل بين الأقسام">
-        <a href="#cover" class="quick-nav__link is-active">العنوان</a>
-        <a href="#work" class="quick-nav__link">طبيعة العمل</a>
-        <a href="#tools" class="quick-nav__link">الأدوات</a>
-        <a href="#impact" class="quick-nav__link">الأثر</a>
-        <a href="#governance" class="quick-nav__link">الضوابط</a>
-      </nav>
-      <div class="action-buttons">
-        <button class="pdf-btn" id="exportPdfBtn" type="button">تصدير إلى PDF</button>
-        <button class="pdf-btn pdf-btn--alt" id="exportPptxBtn" type="button">تصدير إلى PowerPoint</button>
-      </div>
-    </div>
-  </header>
+    </header>
 
-  <main class="presentation">
-    <section class="panel panel--hero" id="cover">
-      <div class="container">
-        <h1 class="hero-title">استخدام أدوات الذكاء الاصطناعي في عملي اليومي في الدعم الفني</h1>
-      </div>
-    </section>
+    <main class="presentation">
+      <section class="panel panel--hero" id="cover">
+        <div class="container">
+          <h1 class="hero-title">
+            استخدام أدوات الذكاء الاصطناعي في عملي اليومي في الدعم الفني
+          </h1>
+        </div>
+      </section>
 
-    <section class="panel" id="work">
-      <div class="container">
-        <h2 class="section-title">نبذة عن طبيعة استخدام ادوات الذكاء الاصطناعي في العمل</h2>
-        <div class="cards cards--2">
-          <article class="card">
-            <h3 class="card__title">الدور الفني اليومي</h3>
-            <ul class="clean-list">
-              <li>حل المشكلات الفنية المرتبطة بأنظمة الشركة.</li>
-              <li>التعامل مع بعض مشكلات قواعد البيانات حسب الحالة.</li>
-              <li>تعديل التقارير بناء على متطلبات العمل التشغيلية.</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3 class="card__title">الدور التحليلي والتوثيقي</h3>
-            <ul class="clean-list">
-              <li>العمل على استعلامات SQL وتحسين دقتها.</li>
-              <li>فهم منطق التقارير قبل تنفيذ التعديلات.</li>
-              <li>توثيق إغلاق البلاغات بشكل واضح يدعم الرجوع المستقبلي.</li>
-            </ul>
-          </article>
+      <section class="panel" id="work">
+        <div class="container">
+          <h2 class="section-title">
+            نبذة عن طبيعة استخدام ادوات الذكاء الاصطناعي في العمل
+          </h2>
+          <div class="cards cards--2">
+            <article class="card">
+              <h3 class="card__title">الدور الفني اليومي</h3>
+              <ul class="clean-list">
+                <li>حل المشكلات الفنية المرتبطة بأنظمة الشركة.</li>
+                <li>التعامل مع بعض مشكلات قواعد البيانات حسب الحالة.</li>
+                <li>تعديل التقارير بناء على متطلبات العمل التشغيلية.</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3 class="card__title">الدور التحليلي والتوثيقي</h3>
+              <ul class="clean-list">
+                <li>العمل على استعلامات SQL وتحسين دقتها.</li>
+                <li>فهم منطق التقارير قبل تنفيذ التعديلات.</li>
+                <li>توثيق إغلاق البلاغات بشكل واضح يدعم الرجوع المستقبلي.</li>
+              </ul>
+            </article>
+          </div>
+          <blockquote class="highlight-quote">
+            الهدف العملي الثابت هو الوصول إلى حل صحيح بسرعة، مع توثيق يمنع تكرار
+            نفس الإشكال.
+          </blockquote>
         </div>
-        <blockquote class="highlight-quote">الهدف العملي الثابت هو الوصول إلى حل صحيح بسرعة، مع توثيق يمنع تكرار نفس الإشكال.</blockquote>
-      </div>
-    </section>
+      </section>
 
-    <section class="panel panel--soft" id="tools">
-      <div class="container">
-        <h2 class="section-title">الأدوات المستخدمة</h2>
-        <div class="cards cards--2">
-          <article class="card card--tool">
-            <h3 class="card__title">ChatGPT Plus</h3>
-            <p class="card__text">الأداة الأكثر استخداما في عملي، لأنها تساعدني في التحليل الأعمق للمشكلات وتفهم صور الأخطاء ولقطات الشاشة بشكل أفضل.</p>
-          </article>
-          <article class="card card--tool">
-            <h3 class="card__title">Google Gemini</h3>
-            <p class="card__text">أداة قوية ومفيدة في حالات متعددة، وتساعد في المقارنة والتحقق الإضافي قبل الاعتماد النهائي للحل.</p>
-          </article>
+      <section class="panel panel--soft" id="tools">
+        <div class="container">
+          <h2 class="section-title">الأدوات المستخدمة</h2>
+          <div class="cards cards--2">
+            <article class="card card--tool">
+              <h3 class="card__title">ChatGPT Plus</h3>
+              <p class="card__text">
+                الأداة الأكثر استخداما في عملي، لأنها تساعدني في التحليل الأعمق
+                للمشكلات وتفهم صور الأخطاء ولقطات الشاشة بشكل أفضل.
+              </p>
+            </article>
+            <article class="card card--tool">
+              <h3 class="card__title">Google Gemini</h3>
+              <p class="card__text">
+                أداة قوية ومفيدة في حالات متعددة، وتساعد في المقارنة والتحقق
+                الإضافي قبل الاعتماد النهائي للحل.
+              </p>
+            </article>
+          </div>
+          <div class="focus-row">
+            <div class="focus-block">
+              <strong>الأداة الأكثر استخداما:</strong> ChatGPT في معظم الحالات
+              اليومية.
+            </div>
+            <div class="focus-block">
+              <strong>أداة مساندة مفيدة:</strong> Gemini في سيناريوهات مختارة.
+            </div>
+          </div>
         </div>
-        <div class="focus-row">
-          <div class="focus-block"><strong>الأداة الأكثر استخداما:</strong> ChatGPT في معظم الحالات اليومية.</div>
-          <div class="focus-block"><strong>أداة مساندة مفيدة:</strong> Gemini في سيناريوهات مختارة.</div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="panel" id="exp1">
-      <div class="container">
-        <h2 class="section-title">الاستخدام – المثال الأول: تعديل استعلامات التقارير و SQL</h2>
-        <div class="process">
-          <div class="process__step">تحليل استعلامات التقارير وفهم منطقها.</div>
-          <div class="process__step">فهم منطق SQL وتعديل الصيغ داخل التقرير.</div>
-          <div class="process__step">إضافة حقول جديدة وتحسين هيكل الاستعلام.</div>
-          <div class="process__step">المساعدة في معالجة المشكلات المرتبطة بالتقرير و SQL.</div>
+      <section class="panel" id="exp1">
+        <div class="container">
+          <h2 class="section-title">
+            الاستخدام – المثال الأول: تعديل استعلامات التقارير و SQL
+          </h2>
+          <div class="process">
+            <div class="process__step">
+              تحليل استعلامات التقارير وفهم منطقها.
+            </div>
+            <div class="process__step">
+              فهم منطق SQL وتعديل الصيغ داخل التقرير.
+            </div>
+            <div class="process__step">
+              إضافة حقول جديدة وتحسين هيكل الاستعلام.
+            </div>
+            <div class="process__step">
+              المساعدة في معالجة المشكلات المرتبطة بالتقرير و SQL.
+            </div>
+          </div>
+          <div class="impact-pills">
+            <span class="pill">توفير الوقت</span>
+            <span class="pill">فهم أفضل لمنطق التقرير</span>
+            <span class="pill">جودة أعلى في التعديلات</span>
+            <span class="pill">تقليل التخمين والتجربة العشوائية</span>
+          </div>
         </div>
-        <div class="impact-pills">
-          <span class="pill">توفير الوقت</span>
-          <span class="pill">فهم أفضل لمنطق التقرير</span>
-          <span class="pill">جودة أعلى في التعديلات</span>
-          <span class="pill">تقليل التخمين والتجربة العشوائية</span>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="panel panel--soft" id="exp2">
-      <div class="container">
-        <h2 class="section-title">الاستخدام – المثال الثاني: استخراج بيانات من قاعدة البيانات</h2>
-        <div class="cards cards--2">
-          <article class="card">
-            <h3 class="card__title">الوضع العملي</h3>
-            <ul class="clean-list">
-              <li>أحيانا أعرف النتيجة المطلوبة، لكن لا أعرف صياغة SQL الدقيقة.</li>
-              <li>أوفر بنية الجداول والعلاقات المرتبطة بالحالة.</li>
-              <li>أوضح الهدف الفني المطلوب بشكل مباشر.</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3 class="card__title">مساهمة AI</h3>
-            <ul class="clean-list">
-              <li>شرح منطق الاستعلام بشكل واضح.</li>
-              <li>توليد SQL مناسب للحالة.</li>
-              <li>تصحيح الاستعلامات غير المكتملة أو غير الدقيقة.</li>
-            </ul>
-          </article>
+      <section class="panel panel--soft" id="exp2">
+        <div class="container">
+          <h2 class="section-title">
+            الاستخدام – المثال الثاني: استخراج بيانات من قاعدة البيانات
+          </h2>
+          <div class="cards cards--2">
+            <article class="card">
+              <h3 class="card__title">الوضع العملي</h3>
+              <ul class="clean-list">
+                <li>
+                  أحيانا أعرف النتيجة المطلوبة، لكن لا أعرف صياغة SQL الدقيقة.
+                </li>
+                <li>أوفر بنية الجداول والعلاقات المرتبطة بالحالة.</li>
+                <li>أوضح الهدف الفني المطلوب بشكل مباشر.</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3 class="card__title">مساهمة AI</h3>
+              <ul class="clean-list">
+                <li>شرح منطق الاستعلام بشكل واضح.</li>
+                <li>توليد SQL مناسب للحالة.</li>
+                <li>تصحيح الاستعلامات غير المكتملة أو غير الدقيقة.</li>
+              </ul>
+            </article>
+          </div>
+          <blockquote class="highlight-quote">
+            الأثر: الوصول للنتيجة أسرع، محاولات عشوائية أقل، ودقة أعلى في
+            المخرجات.
+          </blockquote>
         </div>
-        <blockquote class="highlight-quote">الأثر: الوصول للنتيجة أسرع، محاولات عشوائية أقل، ودقة أعلى في المخرجات.</blockquote>
-      </div>
-    </section>
+      </section>
 
-    <section class="panel" id="exp3">
-      <div class="container">
-        <h2 class="section-title">الاستخدام – المثال الثالث: تحليل مشكلات Oracle وقواعد البيانات</h2>
-        <div class="timeline">
-          <article class="timeline__item">
-            <h3>مدخل التحليل</h3>
-            <p>إرسال رسالة الخطأ أو لقطة الشاشة مباشرة.</p>
-          </article>
-          <article class="timeline__item">
-            <h3>نطاق شائع للمشكلات</h3>
-            <p>خصوصا في الحالات المتعلقة بـ packages و triggers أو مكونات قاعدة البيانات.</p>
-          </article>
-          <article class="timeline__item">
-            <h3>التحليل الفني</h3>
-            <p>تحديد السبب المرجح ومكان الخلل الأقرب للتحقق.</p>
-          </article>
-          <article class="timeline__item">
-            <h3>خطوات الحل</h3>
-            <p>اقتراح خطوات تحقق عملية وحلول مناسبة قبل الاعتماد النهائي.</p>
-          </article>
+      <section class="panel" id="exp3">
+        <div class="container">
+          <h2 class="section-title">
+            الاستخدام – المثال الثالث: تحليل مشكلات Oracle وقواعد البيانات
+          </h2>
+          <div class="timeline">
+            <article class="timeline__item">
+              <h3>مدخل التحليل</h3>
+              <p>إرسال رسالة الخطأ أو لقطة الشاشة مباشرة.</p>
+            </article>
+            <article class="timeline__item">
+              <h3>نطاق شائع للمشكلات</h3>
+              <p>
+                خصوصا في الحالات المتعلقة بـ packages و triggers أو مكونات قاعدة
+                البيانات.
+              </p>
+            </article>
+            <article class="timeline__item">
+              <h3>التحليل الفني</h3>
+              <p>تحديد السبب المرجح ومكان الخلل الأقرب للتحقق.</p>
+            </article>
+            <article class="timeline__item">
+              <h3>خطوات الحل</h3>
+              <p>اقتراح خطوات تحقق عملية وحلول مناسبة قبل الاعتماد النهائي.</p>
+            </article>
+          </div>
+          <div class="impact-pills">
+            <span class="pill">تشخيص أوضح</span>
+            <span class="pill">فهم أسرع للمشكلة</span>
+            <span class="pill">وصول أسرع للإصلاح الفني الصحيح</span>
+          </div>
         </div>
-        <div class="impact-pills">
-          <span class="pill">تشخيص أوضح</span>
-          <span class="pill">فهم أسرع للمشكلة</span>
-          <span class="pill">وصول أسرع للإصلاح الفني الصحيح</span>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="panel panel--soft" id="impact">
-      <div class="container">
-        <h2 class="section-title">الأثر العملي</h2>
-        <div class="metrics">
-          <article class="metric">
-            <span class="metric__value">تسريع الإنجاز</span>
-            <span class="metric__label">في تحليل وتعديل الاستعلامات المعقدة</span>
-          </article>
-          <article class="metric">
-            <span class="metric__value">تقليل التشوش</span>
-            <span class="metric__label">في تحديد الأسباب الجذرية للمشكلات</span>
-          </article>
-          <article class="metric">
-            <span class="metric__value">فهم أعمق</span>
-            <span class="metric__label">لأدوات Oracle ومنطق SQL</span>
-          </article>
-          <article class="metric">
-            <span class="metric__value">جودة أعلى</span>
-            <span class="metric__label">في SQL الخاص بالتقارير</span>
-          </article>
+      <section class="panel panel--soft" id="impact">
+        <div class="container">
+          <h2 class="section-title">الأثر العملي</h2>
+          <div class="metrics">
+            <article class="metric">
+              <span class="metric__value">تسريع الإنجاز</span>
+              <span class="metric__label"
+                >في تحليل وتعديل الاستعلامات المعقدة</span
+              >
+            </article>
+            <article class="metric">
+              <span class="metric__value">تقليل التشوش</span>
+              <span class="metric__label"
+                >في تحديد الأسباب الجذرية للمشكلات</span
+              >
+            </article>
+            <article class="metric">
+              <span class="metric__value">فهم أعمق</span>
+              <span class="metric__label">لأدوات Oracle ومنطق SQL</span>
+            </article>
+            <article class="metric">
+              <span class="metric__value">جودة أعلى</span>
+              <span class="metric__label">في SQL الخاص بالتقارير</span>
+            </article>
+          </div>
+          <div class="cards cards--2">
+            <article class="card">
+              <h3 class="card__title">تحسين التنفيذ اليومي</h3>
+              <ul class="clean-list">
+                <li>تحسين جودة توثيق إغلاق البلاغات.</li>
+                <li>تسريع زمن اغلاق البلاغات.</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3 class="card__title">الاستفادة التراكمية</h3>
+              <ul class="clean-list">
+                <li>خفض تكرار العودة لنفس المشكلة.</li>
+                <li>زيادة المعرفة القابلة للرجوع عند الحالات المشابهة.</li>
+              </ul>
+            </article>
+          </div>
         </div>
-        <div class="cards cards--2">
-          <article class="card">
-            <h3 class="card__title">تحسين التنفيذ اليومي</h3>
-            <ul class="clean-list">
-              <li>تحسين جودة توثيق إغلاق البلاغات.</li>
-              <li>تسريع زمن اغلاق البلاغات.</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3 class="card__title">الاستفادة التراكمية</h3>
-            <ul class="clean-list">
-              <li>خفض تكرار العودة لنفس المشكلة.</li>
-              <li>زيادة المعرفة القابلة للرجوع عند الحالات المشابهة.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="panel" id="governance">
-      <div class="container">
-        <h2 class="section-title">التوصيات والضوابط</h2>
-        <div class="cards cards--2">
-          <article class="card">
-            <h3 class="card__title">التوصيات</h3>
-            <ul class="clean-list">
-              <li>استخدام AI في تحليل الأخطاء الفنية.</li>
-              <li>استخدام AI في مراجعة SQL واستعلامات التقارير.</li>
-              <li>استخدام AI في تحسين توثيق التذاكر.</li>
-              <li>استخدام AI في تدريب الموظفين الجدد على الحالات العملية.</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3 class="card__title">الضوابط المهنية</h3>
-            <ul class="clean-list">
-              <li>مراجعة المخرجات قبل الاعتماد النهائي.</li>
-              <li>عدم إدخال البيانات الحساسة أو السرية بشكل غير آمن.</li>
-              <li>التعامل مع AI كمساعد تقني وليس بديلا عن الخبرة الفنية.</li>
-            </ul>
-          </article>
+      <section class="panel" id="governance">
+        <div class="container">
+          <h2 class="section-title">التوصيات والضوابط</h2>
+          <div class="cards cards--2">
+            <article class="card">
+              <h3 class="card__title">التوصيات</h3>
+              <ul class="clean-list">
+                <li>استخدام AI في تحليل الأخطاء الفنية.</li>
+                <li>استخدام AI في مراجعة SQL واستعلامات التقارير.</li>
+                <li>استخدام AI في تحسين توثيق التذاكر.</li>
+                <li>استخدام AI في تدريب الموظفين الجدد على الحالات العملية.</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3 class="card__title">الضوابط المهنية</h3>
+              <ul class="clean-list">
+                <li>مراجعة المخرجات قبل الاعتماد النهائي.</li>
+                <li>عدم إدخال البيانات الحساسة أو السرية بشكل غير آمن.</li>
+                <li>التعامل مع AI كمساعد تقني وليس بديلا عن الخبرة الفنية.</li>
+              </ul>
+            </article>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
-  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
-  <script src="script.js"></script>
-</body>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
